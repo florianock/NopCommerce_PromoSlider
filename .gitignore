@@ -1,0 +1,6 @@
+obj
+bin/Debug
+bin/Debug/*
+*.zip
+*.db
+*.suo
