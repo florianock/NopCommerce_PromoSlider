@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Promo Slider",
+  "SystemName": "Widgets.PromoSlider",
+  "Version": "0.1",
+  "SupportedVersions": [ "4.10" ],
+  "Author": "Compu-Global-Hyper-Mega-Net",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.PromoSlider.dll",
+  "Description": "This plugin allows you to create promo sliders for actions"
+}

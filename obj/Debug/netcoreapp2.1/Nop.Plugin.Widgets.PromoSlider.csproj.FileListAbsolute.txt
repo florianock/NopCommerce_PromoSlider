@@ -1,0 +1,11 @@
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Presentation\Nop.Web\Plugins\Widgets.PromoSlider\plugin.json
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Presentation\Nop.Web\Plugins\Widgets.PromoSlider\Nop.Plugin.Widgets.PromoSlider.deps.json
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Presentation\Nop.Web\Plugins\Widgets.PromoSlider\Nop.Plugin.Widgets.PromoSlider.dll
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Presentation\Nop.Web\Plugins\Widgets.PromoSlider\Nop.Plugin.Widgets.PromoSlider.pdb
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Plugins\Nop.Plugin.Widgets.PromoSlider\obj\Debug\netcoreapp2.1\Nop.Plugin.Widgets.PromoSlider.csprojAssemblyReference.cache
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Plugins\Nop.Plugin.Widgets.PromoSlider\obj\Debug\netcoreapp2.1\Nop.Plugin.Widgets.PromoSlider.csproj.CoreCompileInputs.cache
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Plugins\Nop.Plugin.Widgets.PromoSlider\obj\Debug\netcoreapp2.1\Nop.Plugin.Widgets.PromoSlider.AssemblyInfoInputs.cache
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Plugins\Nop.Plugin.Widgets.PromoSlider\obj\Debug\netcoreapp2.1\Nop.Plugin.Widgets.PromoSlider.AssemblyInfo.cs
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Plugins\Nop.Plugin.Widgets.PromoSlider\obj\Debug\netcoreapp2.1\Nop.Plugin.Widgets.PromoSlider.csproj.CopyComplete
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Plugins\Nop.Plugin.Widgets.PromoSlider\obj\Debug\netcoreapp2.1\Nop.Plugin.Widgets.PromoSlider.dll
+C:\Users\VWM\source\repos\NopCommerce_Promo_Slider\Plugins\Nop.Plugin.Widgets.PromoSlider\obj\Debug\netcoreapp2.1\Nop.Plugin.Widgets.PromoSlider.pdb
