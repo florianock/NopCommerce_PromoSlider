@@ -1,10 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Nop.Plugin.Widgets.PromoSlider.Domain;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Nop.Data.Mapping;
+using Nop.Plugin.Widgets.PromoSlider.Domain;
 
 namespace Nop.Plugin.Widgets.PromoSlider.Data
 {

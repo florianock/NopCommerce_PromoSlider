@@ -4,9 +4,7 @@ using Nop.Data;
 using Nop.Data.Extensions;
 using Nop.Plugin.Widgets.PromoSlider.Domain;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Nop.Plugin.Widgets.PromoSlider.Data
 {
@@ -14,10 +12,7 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
     {
         #region Ctor
 
-        public PromoSliderObjectContext(DbContextOptions<PromoSliderObjectContext> options) : base(options)
-        {
-
-        }
+        public PromoSliderObjectContext(DbContextOptions<PromoSliderObjectContext> options) : base(options) { }
 
         #endregion
 
@@ -34,14 +29,36 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
 
         #region Methods
 
-        public virtual new DbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
+        public new virtual DbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
         {
             return base.Set<TEntity>();
         }
 
         public virtual string GenerateCreateScript()
         {
-            return this.Database.GenerateCreateScript();
+            return Database.GenerateCreateScript();
+        }
+
+        public virtual int ExecuteSqlCommand(RawSqlString sql, bool doNotEnsureTransaction = false, int? timeout = null, params object[] parameters)
+        {
+            using (Microsoft.EntityFrameworkCore.Storage.IDbContextTransaction transaction = Database.BeginTransaction())
+            {
+                int result = Database.ExecuteSqlCommand(sql, parameters);
+                transaction.Commit();
+
+                return result;
+            }
+        }
+
+        public void Install()
+        {
+            this.ExecuteSqlScript(GenerateCreateScript());
+        }
+
+        public void UnInstall()
+        {
+            this.DropPluginTable(nameof(PromoImageRecord));
+            this.DropPluginTable(nameof(PromoSliderRecord));
         }
 
         public virtual IQueryable<TQuery> QueryFromSql<TQuery>(string sql) where TQuery : class
@@ -54,33 +71,9 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
             throw new NotImplementedException();
         }
 
-        public virtual int ExecuteSqlCommand(RawSqlString sql, bool doNotEnsureTransaction = false, int? timeout = null, params object[] parameters)
-        {
-            using (var transaction = this.Database.BeginTransaction())
-            {
-                var result = this.Database.ExecuteSqlCommand(sql, parameters);
-                transaction.Commit();
-
-                return result;
-            }
-        }
-
         public virtual void Detach<TEntity>(TEntity entity) where TEntity : BaseEntity
         {
             throw new NotImplementedException();
-        }
-
-        public void Install()
-        {
-            //create tables
-            this.ExecuteSqlScript(this.GenerateCreateScript());
-        }
-
-        public void UnInstall()
-        {
-            //drop the table
-            this.DropPluginTable(nameof(PromoImageRecord));
-            this.DropPluginTable(nameof(PromoSliderRecord));
         }
 
         #endregion
