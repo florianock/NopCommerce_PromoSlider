@@ -15,7 +15,7 @@ namespace Nop.Plugin.Widgets.PromoSlider.Infrastructure
     {
         private const string CONTEXT_NAME = "nop_object_context_promo_slider";
 
-        public void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config)
+        public virtual void Register(ContainerBuilder builder, ITypeFinder typeFinder, NopConfig config)
         {
             builder.RegisterPluginDataContext<PromoSliderObjectContext>(CONTEXT_NAME);
 

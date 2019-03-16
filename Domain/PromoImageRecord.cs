@@ -11,6 +11,6 @@ namespace Nop.Plugin.Widgets.PromoSlider.Domain
         public virtual string FilePath { get; set; }
         public virtual int DisplayOrder { get; set; }
 
-        public PromoSliderRecord PromoSlider { get; set; }
+        public virtual PromoSliderRecord PromoSlider { get; set; }
     }
 }

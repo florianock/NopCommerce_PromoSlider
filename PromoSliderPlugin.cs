@@ -1,37 +1,49 @@
-﻿using Nop.Core.Plugins;
+﻿using Nop.Core;
+using Nop.Core.Plugins;
+using Nop.Plugin.Widgets.PromoSlider.Data;
 using Nop.Services.Cms;
-using System;
 using System.Collections.Generic;
 
 namespace Nop.Plugin.Widgets.PromoSlider
 {
-    public class PromoSliderPlugin : IWidgetPlugin
+    public class PromoSliderPlugin : BasePlugin, IWidgetPlugin
     {
-        PluginDescriptor IPlugin.PluginDescriptor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private readonly PromoSliderObjectContext _context;
+        private readonly IWebHelper _webHelper;
 
-        string IPlugin.GetConfigurationPageUrl()
+        private const string COMPONENT_NAME = "WidgetsPromoSlider";
+
+        public PromoSliderPlugin(PromoSliderObjectContext context, IWebHelper webHelper)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _webHelper = webHelper;
         }
 
-        string IWidgetPlugin.GetWidgetViewComponentName(string widgetZone)
+        public override string GetConfigurationPageUrl()
         {
-            throw new NotImplementedException();
+            return $"{_webHelper.GetStoreLocation()}Admin/{COMPONENT_NAME}/Configure";
         }
 
-        IList<string> IWidgetPlugin.GetWidgetZones()
+        public string GetWidgetViewComponentName(string widgetZone)
         {
-            throw new NotImplementedException();
+            return COMPONENT_NAME;
         }
 
-        void IPlugin.Install()
+        public IList<string> GetWidgetZones()
         {
-            throw new NotImplementedException();
+            return new List<string>();
         }
 
-        void IPlugin.Uninstall()
+        public override void Install()
         {
-            throw new NotImplementedException();
+            _context.Install();
+            base.Install();
+        }
+
+        public override void Uninstall()
+        {
+            _context.Uninstall();
+            base.Uninstall();
         }
     }
 }

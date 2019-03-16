@@ -12,7 +12,7 @@ namespace Nop.Plugin.Widgets.PromoSlider.Domain
 
         public virtual int PromoSliderId { get; set; }
         public virtual string PromoSliderName { get; set; }
-        public bool IsActive { get; set; }
+        public virtual bool IsActive { get; set; }
         public virtual string ZoneName { get; set; }
         public virtual int Interval { get; set; }
         public virtual bool PauseOnHover { get; set; }

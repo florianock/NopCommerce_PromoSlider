@@ -55,7 +55,7 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
             this.ExecuteSqlScript(GenerateCreateScript());
         }
 
-        public void UnInstall()
+        public void Uninstall()
         {
             this.DropPluginTable(nameof(PromoImageRecord));
             this.DropPluginTable(nameof(PromoSliderRecord));
