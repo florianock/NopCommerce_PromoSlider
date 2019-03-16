@@ -10,6 +10,8 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
 {
     public partial class PromoImageMap : NopEntityTypeConfiguration<PromoImageRecord>
     {
+        #region Methods
+
         public override void Configure(EntityTypeBuilder<PromoImageRecord> builder)
         {
             builder.ToTable("PromoSlider_PromoImages");
@@ -26,5 +28,7 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
                     .HasForeignKey(i => i.PromoSliderId)
                     .IsRequired();
         }
+
+        #endregion
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Nop.Plugin.Widgets.PromoSlider.Domain
 {
-    public class PromoSliderRecord : BaseEntity
+    public partial class PromoSliderRecord : BaseEntity
     {
         public PromoSliderRecord()
         {

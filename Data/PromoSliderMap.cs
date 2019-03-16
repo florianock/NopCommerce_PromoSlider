@@ -10,6 +10,8 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
 {
     public partial class PromoSliderMap : NopEntityTypeConfiguration<PromoSliderRecord>
     {
+        #region Methods
+
         public override void Configure(EntityTypeBuilder<PromoSliderRecord> builder)
         {
             builder.ToTable("PromoSlider_PromoSliders");
@@ -23,5 +25,7 @@ namespace Nop.Plugin.Widgets.PromoSlider.Data
             builder.Property(m => m.PauseOnHover);
             builder.Property(m => m.Wrap);
         }
+
+        #endregion
     }
 }
